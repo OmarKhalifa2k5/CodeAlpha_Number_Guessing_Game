@@ -1,9 +1,11 @@
 #include <iostream>
 #include <cstdlib> 
+#include <time.h> 
 
 using namespace std;
 
 int generateRandomInteger(int upperBound){
+	srand(time(0));
 	return rand()%upperBound;
 }
 
@@ -11,7 +13,7 @@ int main(){
 	
 	int upperBound = 0;
 	int count = 0;
-	
+	system("clear");
 	cout << "\t============================================================" << "\n";
 	cout << "\t+.+.+.+.+.+.+.+.+.+ NUMBER GUESSING GAME +.+.+.+.+.+.+.+.+.+" << "\n";
 	cout << "\t============================================================" << "\n";
@@ -51,7 +53,7 @@ int main(){
 	}
 	
 	cout << "\t YOU WIN!\n";
-	cout << "\tGuesses made [" << count << "]\n\n\n\n\n\n";
+	cout << "\tGuesses made [" << count << "]\n\n";
 	
 	return 0;
 }
